@@ -1,0 +1,44 @@
+const express = require('express');
+const router = express.Router();
+
+const authRoutes = require('./auth.routes');
+const assetRoutes = require('./asset.routes');
+const workOrderRoutes = require('./workOrder.routes');
+const maintenanceRoutes = require('./maintenance.routes');
+const inspectionRoutes = require('./inspection.routes');
+const technicianRoutes = require('./technician.routes');
+const sparePartRoutes = require('./sparePart.routes');
+const downtimeRoutes = require('./downtime.routes');
+const aiRoutes = require('./ai.routes');
+const reportRoutes = require('./report.routes');
+const notificationRoutes = require('./notification.routes');
+const userRoutes = require('./user.routes');
+const auditRoutes = require('./audit.routes');
+const locationRoutes = require('./location.routes');
+const componentRoutes = require('./component.routes');
+const warrantyRoutes = require('./warranty.routes');
+const meterRoutes = require('./meter.routes');
+const serviceHistoryRoutes = require('./serviceHistory.routes');
+const chatRoutes = require('./chat.routes');
+
+router.use('/auth', authRoutes);
+router.use('/assets', assetRoutes);
+router.use('/work-orders', workOrderRoutes);
+router.use('/maintenance-plans', maintenanceRoutes);
+router.use('/inspections', inspectionRoutes);
+router.use('/technicians', technicianRoutes);
+router.use('/spare-parts', sparePartRoutes);
+router.use('/downtime-events', downtimeRoutes);
+router.use('/ai', aiRoutes);
+router.use('/chat', chatRoutes);
+router.use('/reports', reportRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/users', userRoutes);
+router.use('/audit-logs', auditRoutes);
+router.use('/locations', locationRoutes);
+router.use('/', componentRoutes);
+router.use('/', warrantyRoutes);
+router.use('/', meterRoutes);
+router.use('/', serviceHistoryRoutes);
+
+module.exports = router;
